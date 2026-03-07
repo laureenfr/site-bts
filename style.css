@@ -124,14 +124,15 @@ main {
 
 .hero {
     height: 100vh;
-    margin-left: 0;
-    background-image: url("images/informatique.jpg");
+    margin-left: var(--sidebar-width);
+    background-image: url("../images/informatique.jpg");
     background-size: cover;
     background-position: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-left: 450px;
+    padding-left: 80px;
+    padding-right: 30px;
     color: rgb(255, 255, 255);
 }
 
@@ -214,7 +215,7 @@ main {
     top: 0;
     bottom: 0;
     width: 3px;
-    background: #d4d4d4;
+    background: #4b4848;
 }
 
 .timeline-item {
@@ -248,7 +249,7 @@ main {
     background: white;
     border-radius: 12px;
     padding: 20px;
-    border: 1px solid #ddd;
+    border: 1px solid #474343;
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
@@ -316,21 +317,6 @@ main {
    9. DATA CARDS (STAGES)
    ============================================================ */
 
-.stage-presentation {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-}
-
-.data-card {
-    background: white;
-    border-radius: 12px;
-    padding: 25px;
-    width: 300px;
-    border: 1px solid #ddd;
-    transition: transform 0.3s ease;
-}
 
 .data-card:hover {
     transform: scale(1.02);
@@ -422,7 +408,7 @@ main {
 }
 .data-card h3 {
     color				: #534f4f;
-    font-size			: 3.5em;
+    font-size			: 2em;
     font-weight			: 600;
     line-height			: 1;
     padding-bottom		: 0.5em;
@@ -434,7 +420,7 @@ main {
 .data-card h4 {
     color				: #3f3d3d;
     text-transform		: uppercase;
-    font-size			: 1.5em;
+    font-size			: 1em;
     font-weight			: 300;
     line-height			: 1;
     letter-spacing		: 0.1em;
@@ -524,8 +510,8 @@ main {
 /* ========================================================= */
 
 .footer-info {
-    width: calc(100% - 260px); /* laisse la place à ta sidebar */
-    margin-left: 260px;
+    width: calc(100% - var(--sidebar-width));
+    margin-left: var(--sidebar-width);
     background: #111;
     padding: 50px;
     color: #ddd;
@@ -588,8 +574,8 @@ main {
 
 /* ----------- Bas de page ----------- */
 .footer-bottom {
-    width: calc(100% - 260px);
-    margin-left: 260px;
+    width: calc(100% - var(--sidebar-width));
+    margin-left: var(--sidebar-width);
     background: #0b0b0b;
     text-align: left;
     padding: 20px 50px;
@@ -609,7 +595,162 @@ main {
 .footer-bottom a:hover {
     text-decoration: underline;
 }
+/* ============================================================
+   11. RESPONSIVE DESIGN
+   ============================================================ */
 
+/* Tablette */
+@media (max-width: 1024px) {
+    :root {
+        --sidebar-width: 220px;
+    }
 
+    main,
+    .page-content,
+    .hero,
+    .hero2 {
+        margin-left: var(--sidebar-width);
+    }
 
+    .hero,
+    .hero2 {
+        padding-left: 80px;
+        padding-right: 30px;
+    }
 
+    .typing {
+        font-size: 30px;
+        white-space: normal;
+        border-right: none;
+    }
+
+    .flip-card {
+        width: 100%;
+        max-width: 420px;
+    }
+
+    .footer-info,
+    .footer-bottom {
+        width: calc(100% - var(--sidebar-width));
+        margin-left: var(--sidebar-width);
+    }
+}
+
+/* Téléphone */
+@media (max-width: 768px) {
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding: 20px;
+        border-right: none;
+    }
+
+    main,
+    .page-content,
+    .hero,
+    .hero2,
+    .footer-info,
+    .footer-bottom {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .hero,
+    .hero2 {
+        height: auto;
+        min-height: 100vh;
+        padding: 40px 20px;
+        justify-content: center;
+    }
+
+    .typing {
+        font-size: 26px;
+        white-space: normal;
+        overflow: visible;
+        border-right: none;
+    }
+
+    .timeline::before {
+        left: 20px;
+    }
+
+    .timeline-item {
+        width: 100%;
+        margin-left: 0 !important;
+        padding: 20px 20px 20px 50px;
+        text-align: left !important;
+    }
+
+    .timeline-item.left::before,
+    .timeline-item.right::before {
+        left: 12px;
+        right: auto;
+    }
+
+    .flip-card {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        min-height: 260px;
+    }
+
+    .flip-card.flipped {
+        height: auto;
+        min-height: 520px;
+    }
+
+    .data-card {
+        width: 100%;
+        min-width: unset;
+        max-width: 100%;
+        padding: 20px;
+    }
+
+    .pdf-wrapper iframe {
+        height: 70vh;
+    }
+
+    .footer-info {
+        display: flex;
+        flex-direction: column;
+        padding: 30px 20px;
+        gap: 25px;
+    }
+
+    .footer-bottom {
+        padding: 20px;
+    }
+
+    .footer-column {
+        min-width: unset;
+    }
+}
+
+/* Très petits écrans */
+@media (max-width: 480px) {
+    .sidebar-title {
+        font-size: 18px;
+    }
+
+    .sidebar-menu a {
+        font-size: 14px;
+    }
+
+    .typing {
+        font-size: 22px;
+    }
+
+    .Titre2 {
+        font-size: 26px;
+    }
+
+    .Titre3 {
+        font-size: 20px;
+    }
+
+    main,
+    .page-content {
+        padding: 25px 15px;
+    }
+}

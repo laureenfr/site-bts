@@ -6,7 +6,7 @@
     <title>Portfolio – BTS SIO</title>
 
     <!-- Police & CSS global -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 
     <!-- Icônes FontAwesome -->
     <script src="https://kit.fontawesome.com/a2e0e6ad59.js" crossorigin="anonymous"></script>
@@ -28,7 +28,7 @@
 
      <div class="sidebar-icons">
     <a href="https://www.linkedin.com/feed/?trk=cold_join_sign_in">
-        <img src="images/linkedin.jpg" alt="LinkedIn">
+        <img src="linkedin.jpg" alt="LinkedIn">
     </a>
 </div>
     <ul class="sidebar-menu">
@@ -96,7 +96,7 @@ window.onload = typeLoop;
         <p>
            <br>
            <br> 
-            En reconversion professionnelle, j'ai souhaité me reconvertir dans l'informatique...
+            En reconversion professionnelle, j'ai souhaité me reconvertir dans l'informatique... (Mettre les points importants)
         </p>
     </div>
 </section>
@@ -115,13 +115,16 @@ window.onload = typeLoop;
         <div class="timeline-item left">
             <div class="content">
                 <span class="year">2024 – 2026</span>
+                <br>
                 <h3>BTS Services Informatiques aux Organisations option Solutions d'Infrastructures, Systèmes et Réseaux.</h3>
-                    <br>En Alternance </br>
+                    <br class="timeline-subtitle">En Alternance</br>
+                    <div class="timeline-links">
                    <a href="https://cros.com/" target="_blank" rel="noreferrer">
                         <button class="boutons"> Site web de la société </button>
                     <a href="https://www.mfr-stegreve.org/" target="_blank" rel="noreferrer">
                         <button class="boutons"> Site web de la MFR </button>   
                     </a> 
+                    </div>
             </div>
         </div>
 
@@ -162,13 +165,31 @@ window.onload = typeLoop;
                         </a>
         </div>
 </section>
+<script>
+const timelineItems = document.querySelectorAll('.timeline-item');
 
+function showTimelineOnScroll() {
+    const triggerBottom = window.innerHeight * 0.85;
+
+    timelineItems.forEach(item => {
+        const itemTop = item.getBoundingClientRect().top;
+
+        if (itemTop < triggerBottom) {
+            item.classList.add('show');
+        }
+    });
+}
+
+window.addEventListener('scroll', showTimelineOnScroll);
+window.addEventListener('load', showTimelineOnScroll);
+</script>
 <!-- =======================================================
      SECTION 4 – PRÉSENTATION DU BTS (Flip Cards)
 ========================================================= -->
 <section id="bts" class="page-content">
     <div class="center-block">
         <div class="separator-fade"></div>
+        <div class="options-container"></div>
         <h2 class="Titre2">Présentation du BTS SIO</h2>
 
     <div class="flip-container">
@@ -176,23 +197,21 @@ window.onload = typeLoop;
         <!-- SISR -->
         <div class="flip-card" onclick="this.classList.toggle('flipped')">
             <div class="flip-card-inner">
-
                 <div class="flip-card-front">
                     <h2>🖧 Option SISR</h2>
                     <img src="images/datacenter.jpg">
                 </div>
-
                 <div class="flip-card-back">
                     <h2>🖧 Option SISR</h2>
                     <br>
                     <br>
                     <p>L'acronyme SISR signifie "Solutions d'Infrastrucutres Systèmes et Réseaux". L'option SISR est destinée aux étudiants qui s'orientent vers les métiers liés à la conception et la maintenance d'infrastrucutres réseaux.</p>
                    <br> 
-                    <p>Assurer la sécurité, la mainteance et l'installation des réseaux et des équipements informatiques font partie des principales misssions des futurs administrateurs, techniciens ou pilotes d'exploitation.</p> 
+                    <p>Assurer la sécurité, la mainteance et l'installation des réseaux et des équipements informatiques font partie des principales missions des futurs administrateurs, techniciens ou pilotes d'exploitation.</p> 
                     <br>
                     Des cours plus généraux viendront compléter la formation et apporter des comptéences plus généralistes, permettant ainsi aux diplômés d'être opérationnels dans n'importe quelle entreprise. 
                 </div>
-
+               
             </div>
 
         </div>
@@ -200,7 +219,6 @@ window.onload = typeLoop;
         <!-- SLAM -->
         <div class="flip-card" onclick="this.classList.toggle('flipped')">
             <div class="flip-card-inner">
-
                 <div class="flip-card-front">
                     <h2>💻 Option SLAM</h2>
                     <img src="images/developper.jpg">
@@ -209,7 +227,7 @@ window.onload = typeLoop;
                     <h2>💻 Option SLAM</h2>
                     <br>
                     <br>
-                    <p>L'acronyme SLAM signifie "Solutions Logicielles et Applications Métiers". Voici quelques indications sur cette seconde option du BTS SIO ainsi des précisions sur cette formation et ses débouchés.</p> 
+                    <p>L'acronyme SLAM signifie "Solutions Logicielles et Applications Métiers". Voici quelques indications sur cette seconde option du BTS SIO ainsi que des précisions sur cette formation et ses débouchés.</p> 
                     <br>
                     <p>L'option SLAM est destinée aux étudiants qui s'orientent vers les métiers liés à la conception et la maintenance de programmes applicatifs. </p>
                     <br>
@@ -217,7 +235,6 @@ window.onload = typeLoop;
                     <br>
                     <p>Ils pourront également diriger l'intégration, la sécurisation et la configuration des serveurs, mais aussi des postes clients et des équipements d'interconnexion.</p>
                 </div>
-
     </div>
 </section>
 
@@ -226,9 +243,11 @@ window.onload = typeLoop;
 ========================================================= -->
 <section id="entreprise" class="page-content">
     <div class="center-block">
+        <div class="separator-fade"></div>
         <h2 class="Titre2">Entreprise</h2>
-        	<h1 class="Titre">Entreprise</h1>
-				</div>
+		</div>
+                <br>
+                <br>
 						<p>Située dans l’agglomération grenobloise, CROS est une entreprise familiale reconnue comme spécialiste local pour la vente, la location et la maintenance d’équipements tels que les compresseurs d’air, les pompes à vide, les pompes et stations de relevage, les groupes électrogènes et les matériels de foration.
 						Les clients sont des entreprises industrielles, des entreprises du BTP ou encore des collectivités territoriales de l’arc alpin.</p>
 						<div class="stage-presentation">
@@ -237,29 +256,68 @@ window.onload = typeLoop;
 								<h4>Collaborateurs</h4>
 								<h4>Répartis en 5 pôles d'activités</h4>
 								</p>
-                                </div>
+                            </div>
 							<div class="data-card">
 								<h3>5 pôles</h3>
 								<h4>3 pôles d'activités</h4>
 								<h4>2 pôles transverses</h4>
 								<p>
-							    </div>
+							</div>
 							<div class="data-card">
 								<h3>17 Millions €</h3>
-								<h4>De chiffre d'affaire</h4>
+								<h4>De chiffre d'affaires</h4>
 								<h5></h5>
 								<p>
-							</div>	
-                            </p>
-                            
-    </div>
+							</div>
+                        </div>
 </section>
+ <!-- ===================== Les pôles d'activité ===================== -->
+  <section id="entreprise" class="page-content">
+     <div class="center-block">
+        <h2 class="Titre3">Les pôles d'activité</h2>
+                        <div class="stage-presentation">
+                            <div class="data-card">
+								<h3>Pôle EAU</h3>
+								<h4>& Systèmes de Pompage</h4>
+								<h5>Etude des besoins pour la mise en œuvre des équipements adaptés tels que les pompes, armoires de commande et de régulation, réservoirs, tuyauteries, robinetterie, instrumentation et télétransmission.</h5>
+                            </div>
+							<div class="data-card">
+								<h3>Pôle AIR</h3>
+								<h4>& Vides Industriels</h4>
+								<h5>Accompagnent pour qualifier les besoins, dimensionner et installer des centrales d’air comprimé avec des machines performantes adaptées pour l'exploitation</h5>
+							</div>
+							<div class="data-card">
+								<h3>Pôle ENERGIE</h3>
+								<h4>Mobile & Foration</h4>
+								<h5>Conseilles pour les chantiers et travaux de forage pour des solutions techniques adaptées, économiques et fiables avec groupes électrogènes, compresseurs mobiles et matériels de foration.</h5>
+                            </div>
+                        </div>
+  </section>
+<!-- ===================== Les pôles transverses ===================== -->
+<section id="entreprise" class="page-content">
+     <div class="center-block">
+        <h2 class="Titre3">Les pôles transverses</h2>
+                        <div class="stage-presentation">
+                            <div class="data-card">
+								<h3>Pôle de Moyens Généraux (MGX)</h3>
+								<h4></h4>
+								<h4></h4>
+							</div>
+							<div class="data-card">
+								<h3>Pôle Développement Humain et Finance (DHF)</h3>
+								<h4></h4>
+								<h4></h4>
+							</div>
+                        </div>
+                            
+  </section>
 
 <!-- =======================================================
      SECTION 6 – ORGANIGRAMME
 ========================================================= -->
 <section id="organigramme" class="page-content">
     <div class="center-block">
+        <div class="separator-fade"></div>
         <h2 class="Titre2">Organigramme</h2>
         <br>
         <br>
@@ -272,6 +330,7 @@ window.onload = typeLoop;
 ========================================================= -->
 <section id="schema" class="page-content">
     <div class="center-block">
+        <div class="separator-fade"></div>
         <h2 class="Titre2">Schéma réseau</h2>
         <br>
         <br>
@@ -284,7 +343,11 @@ window.onload = typeLoop;
 ========================================================= -->
 <section id="synthese" class="page-content">
     <div class="center-block">
+        <div class="separator-fade"></div>
         <h2 class="Titre2">Tableau de synthèse</h2>
+        <br>
+        <br>
+    <iframe src=".pdf" width="100%" height="600px"></iframe>
     </div>
 </section>
 <!-- =======================================================
@@ -292,6 +355,7 @@ window.onload = typeLoop;
 ========================================================= -->
 <section id="realisations" class="page-content">
     <div class="center-block">
+        <div class="separator-fade"></div>
         <h2 class="Titre2">Mes réalisations professionnelles en centre de formation - MFR</h2>
     </div>
     <br>
@@ -327,7 +391,7 @@ window.onload = typeLoop;
             <h4>Mise en place d'un RAID 1</h4>
             <h5>Sous Linux</h5>
             <p></p>
-            <a href="_BTSSIO2_CDC_Tâches courantes du service informatique et tâches d'administration.pdf"
+            <a href="CDC format PDF/RAID1.pdf"
                class="bouton-rect" target="_blank">Voir les missions</a>
         </div>
 
@@ -337,7 +401,7 @@ window.onload = typeLoop;
             <h4>Mise en place d'un cluster</h4>
             <h5>Sous Windows</h5>
             <p></p>
-            <a href="_BTSSIO2_CDC_Assurer le support aux utilisateurs.pdf"
+            <a href=".pdf"
                class="bouton-rect" target="_blank">Voir les missions</a>
         </div>
 
@@ -347,7 +411,7 @@ window.onload = typeLoop;
             <h4>Mise en place d'un DFS</h4>
             <h5>Sous Windows</h5>
             <p></p>
-            <a href="_BTSSIO2_CDC_Mission_ajout boîte aux lettres partagée.pdf"
+            <a href="CDC format PDF/DFS.pdf"
                class="bouton-rect" target="_blank">Voir la mission</a>
         </div>
 
@@ -357,7 +421,7 @@ window.onload = typeLoop;
             <h4>Mise en place d'un VPN Nomade</h4>
             <h5></h5>
             <p></p>
-            <a href="BTSSIO2_CDC_Mission_SauvergardePC_Directeur.pdf"
+            <a href="CDC format PDF/VPN Nomade.pdf"
                class="bouton-rect" target="_blank">Voir la mission</a>
         </div>
 
@@ -365,10 +429,11 @@ window.onload = typeLoop;
      SECTION – MES RÉALISATIONS PROFESSIONNELLES EN ENTREPRISE
 ========================================================= -->
  <div class="center-block">
+    <div class="separator-fade"></div>
         <h2 class="Titre2">Mes réalisations professionnelles en entreprise - CROS</h2>
     </div>
-    <br>
-    <br>
+   <br>
+   <br> 
 
     <!-- ===================== PROJETS 1ÈRE ANNÉE ===================== -->
      <div class="center-block">
@@ -382,16 +447,16 @@ window.onload = typeLoop;
             <h4>Déploiement de deux Check List</h4>
             <h5>Sous Mistral - DLRIX</h5>
             <p></p>
-            <a href=".pdf" class="bouton-rect" target="_blank">Voir la mission</a>
+            <a href="CDC format PDF/Check List.pdf" class="bouton-rect" target="_blank">Voir la mission</a>
         </div>
 
         <!-- PROJET 2 -->
         <div class="data-card">
             <h3>PROJET 2</h3>
             <h4>Changement de disques du NAS</h4>
-            <h5>A insérer</h5>
+            <h5></h5>
             <p></p>
-            <a href="" class="bouton-rect" target="_blank">Voir la mission</a>
+            <a href="CDC format PDF/NAS.pdf" class="bouton-rect" target="_blank">Voir la mission</a>
         </div>
 
         <!-- MISSION – Tâches courantes -->
@@ -405,7 +470,7 @@ window.onload = typeLoop;
             <h5>Ajout d'une boîte aux lettres partagée avec droits d'accès</h5>
             
             <p></p>
-            <a href="_BTSSIO2_CDC_Tâches courantes du service informatique et tâches d'administration.pdf"
+            <a href="CDC format PDF/Tâches courantes.pdf"
                class="bouton-rect" target="_blank">Voir les missions</a>
         </div>
 
@@ -428,17 +493,17 @@ window.onload = typeLoop;
             <h4>Ajout boîte aux lettres partagée</h4>
             <h5></h5>
             <p></p>
-            <a href="_BTSSIO2_CDC_Mission_ajout boîte aux lettres partagée.pdf"
+            <a href=".pdf"
                class="bouton-rect" target="_blank">Voir la mission</a>
         </div>
 
         <!-- MISSION – Sauvegarde PC -->
         <div class="data-card">
             <h3>MISSION</h3>
-            <h4>Sauvegarde PC du directeur</h4>
+            <h4>Sauvegarde d'un poste sous Veeam Agent Microsoft</h4>
             <h5></h5>
             <p></p>
-            <a href="BTSSIO2_CDC_Mission_SauvergardePC_Directeur.pdf"
+            <a href="CDC format PDF/Sauvegarde.pdf"
                class="bouton-rect" target="_blank">Voir la mission</a>
         </div>
 
@@ -448,7 +513,7 @@ window.onload = typeLoop;
             <h4>Sécurisation de postes de travail</h4>
             <h5></h5>
             <p></p>
-            <a href="Laureen_RUELLE_BTSSIO2_CDC_Mission_Sécurisation des postes(goulottes).pdf"
+            <a href="CDC format PDF/Sécurisation.pdf"
                class="bouton-rect" target="_blank">Voir la mission</a>
         </div>
 
@@ -456,8 +521,6 @@ window.onload = typeLoop;
     <!-- ===================== PROJETS 2ÈME ANNÉE ===================== -->
      <div class="center-block">
     <h2 class="Titre3">Projets de deuxième année</h2>
-    
-
     <div class="stage-presentation">
 
         <!-- PROJET 1 -->
@@ -484,7 +547,7 @@ window.onload = typeLoop;
             <h4>Modification infrastructure réseau</h4>
             <h5></h5>
             <p></p>
-            <a href="Laureen_RUELLE_BTSSIO2_CDC_Modification infrastrucutre réseau.pdf"
+            <a href=""
                class="bouton-rect" target="_blank">Voir la mission</a>
         </div>
 
@@ -503,7 +566,7 @@ window.onload = typeLoop;
             <h4>Migration et installation de drivers</h4>
             <h5></h5>
             <p></p>
-            <a href="Laureen_RUELLE_BTSSIO2_CDC_Mission_Migration et installation de drivers.pdf" class="bouton-rect" target="_blank">Voir la mission</a>
+            <a href=".pdf" class="bouton-rect" target="_blank">Voir la mission</a>
         </div>
 
         <!-- MISSION – Placeholder -->
@@ -512,7 +575,7 @@ window.onload = typeLoop;
             <h4>Mise en place d'une machine dédiée à un système d'automatisation</h4>
             <h5></h5>
             <p></p>
-            <a href="#" class="bouton-rect" target="_blank">Voir la mission</a>
+            <a href="CDC format PDF/P" class="bouton-rect" target="_blank">Voir la mission</a>
         </div>
 
         <!-- MISSION – Placeholder -->
@@ -533,12 +596,13 @@ window.onload = typeLoop;
 ========================================================= -->
 <section id="ressentis" class="page-content">
     <div class="center-block">
+        <div class="separator-fade"></div>
         <h2 class="Titre2">Mes ressentis</h2>
     
     <br>
     <br>
     <p>Au début de la formation cela n'a pas été facile au début sur le plan de la reprise d'études mais aussi la difficulté de l'informatique. 
-    <pr>Je me suis remise en question plusieurs fois et aussi le choix de la foramtion mais malgrés tout, le formation me plaisait j'aimais ce que je faisais et j'ai alors persévéré et aujourd'hui je ne regrette rien.</p>
+    <pr>Je me suis remise en question plusieurs fois et aussi le choix de la foramtion mais malgré tout, le formation me plaisait j'aimais ce que je faisais et j'ai alors persévéré et aujourd'hui je ne regrette rien.</p>
 </div>
     </section>
 
@@ -547,6 +611,7 @@ window.onload = typeLoop;
 ========================================================= -->
 <section id="veille" class="page-content">
     <div class="center-block">
+        <div class="separator-fade"></div>
         <h2 class="Titre2">Veille technologique</h2>
         <br>
         <br>
@@ -558,21 +623,23 @@ window.onload = typeLoop;
 								<h3>Veille Techno 1</h3>
 								<h4>ZERO TRUST</h4>
 								<h4></h4>
-								</p>
-                                </div>
+                                <p>
+                                <a href="CDC format PDF/Zero trust.pdf" class="bouton-rect" target="_blank">Voir ici</a>
+                            </div>
 							<div class="data-card">
 								<h3>Veille Techno 2</h3>
 								<h4>VIRTUALISATION & CONTENEURISATION</h4>
 								<h4></h4>
 								<p>
-							    </div>
+                                <a href=".pdf" class="bouton-rect" target="_blank">Voir ici</a>
+                            </div>
 							<div class="data-card">
 								<h3>Veille Techno 3</h3>
 								<h4>CLOUD COMPUTING</h4>
 								<h5></h5>
 								<p>
-							</div>	
-                            </p>
+                                <a href=".pdf" class="bouton-rect" target="_blank">Voir ici</a>
+                            </div>
                             
     </div>
 </section>
@@ -584,6 +651,7 @@ window.onload = typeLoop;
 ========================================================= -->
 <section id="apres" class="page-content">
     <div class="center-block">
+        <div class="separator-fade"></div>
         <h2 class="Titre2">Après le BTS</h2>
         <br>
         <br>
@@ -670,9 +738,8 @@ document.getElementById("searchBtn").addEventListener("click", function () {
         alert("Aucun résultat trouvé.");
     }
 });
+
 </script>
 
 </body>
 </html>
-
-

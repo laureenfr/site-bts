@@ -133,7 +133,7 @@ main {
 .hero {
     height: 100vh;
     margin-left: var(--sidebar-width);
-    background-image: url("../images/informatique.jpg")
+    background-image: url("images/informatique.jpg");
     background-size: cover;
     background-position: center;
     display: flex;

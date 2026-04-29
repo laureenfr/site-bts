@@ -172,7 +172,7 @@ main {
     margin-left: var(--sidebar-width);
     padding: 60px 50px;
     background-image:
-        url("images\tech.jpg");
+        url("../images/tech.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

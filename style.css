@@ -133,7 +133,7 @@ main {
 .hero {
     height: 100vh;
     margin-left: var(--sidebar-width);
-    background-image: url("https://laureenfr.github.io/site-bts/images/informatique.jpg");
+    background-image: url("../images/informatique.jpg");
     background-size: cover;
     background-position: center;
     display: flex;
@@ -172,7 +172,7 @@ main {
     margin-left: var(--sidebar-width);
     padding: 60px 50px;
     background-image:
-        url("https://laureenfr.github.io/site-bts/images/tech.jpg");
+        url("../images/tech.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -326,14 +326,8 @@ main {
    ============================================================ */
 
 .flip-card {
-    width: 420px;
-    cursor: pointer;
-    perspective: 1200px;
-    margin-bottom: 40px;
-
-    /* Hauteur du recto */
-    height: 260px;
-    transition: height 0.4s ease;
+  width: 420px;
+  height: 260px;
 }
 
 /* Quand la carte est retournée → agrandit la hauteur automatiquement */
@@ -342,6 +336,7 @@ main {
 }
 
 .flip-card-inner {
+    position: relative;
     width: 100%;
     height: 100%;
     transition: transform 0.8s ease;
@@ -361,6 +356,8 @@ main {
     border-radius: 20px;
     padding: 20px;
     box-sizing: border-box;
+    top: 0;
+    left: 0;
 }
 
 .flip-card-front {
@@ -383,8 +380,9 @@ main {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    gap: 60px;
+    gap: 80px;
     flex-wrap: wrap;
+    margin-top: 40px;
 }
 
 /* ============================================================

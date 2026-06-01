@@ -347,6 +347,36 @@ main {
     opacity: 1;
     transform: translateX(0);
 }
+/* ========================================================= */
+/*                    ENTREPRISE                    */
+/* ========================================================= */
+.photo-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.presentation {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 50px auto;
+}
+
+.photo-cros {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.texte-presentation {
+    flex: 1;
+}
+
+.texte-presentation p {
+    line-height: 1.7;
+}
 /* ============================================================
    8. FLIP CARDS (SISR / SLAM)
    ============================================================ */

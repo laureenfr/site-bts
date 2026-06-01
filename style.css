@@ -845,3 +845,19 @@ main {
         padding: 25px 15px;
     }
 }
+.rectangle {
+  width: 80%;
+  max-width: 900px;
+  padding: 25px;
+  margin: 20px auto;
+  background-color: #f4f4f4;
+  border-radius: 12px;
+}
+
+.rectangle h3 {
+  margin-bottom: 10px;
+}
+
+.rectangle p {
+  line-height: 1.6;
+}

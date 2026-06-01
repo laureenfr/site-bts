@@ -350,32 +350,27 @@ main {
 /* ========================================================= */
 /*                    ENTREPRISE                    */
 /* ========================================================= */
-.photo-container {
-    text-align: center;
-    margin-top: 30px;
-}
-
-.presentation {
+.entreprise-box {
     display: flex;
     align-items: center;
-    gap: 30px;
-    max-width: 1000px;
-    margin: 50px auto;
+    gap: 40px;
+    background: rgba(255,255,255,0.85);
+    padding: 40px;
+    border-radius: 20px;
+    max-width: 1200px;
+    margin: 40px auto;
 }
 
-.photo-cros {
+.entreprise-img {
     width: 220px;
-    height: 220px;
-    object-fit: cover;
-    border-radius: 12px;
+    border-radius: 20px;
 }
 
-.texte-presentation {
+.entreprise-text {
     flex: 1;
-}
-
-.texte-presentation p {
-    line-height: 1.7;
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: left;
 }
 /* ============================================================
    8. FLIP CARDS (SISR / SLAM)

@@ -158,7 +158,7 @@ main {
    .hero2 {
     height: 100vh;
     margin-left: var(--sidebar-width);
-    background-image: url("images/tech.jpg");
+    background-image: url("../images/tech.jpg");
     background-size: cover;
     background-position: center;
     display: flex;

@@ -711,6 +711,11 @@ main {
 .footer-bottom a:hover {
     text-decoration: underline;
 }
+
+.footer-link {
+    color: #f4f4f4;
+    text-decoration: none;
+}
 /* ============================================================
    11. RESPONSIVE DESIGN
    ============================================================ */

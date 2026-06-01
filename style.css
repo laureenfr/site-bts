@@ -34,6 +34,44 @@ body {
 }
 
 /* ============================================================
+   CV
+   ============================================================ */
+
+.case-cv h3 {
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+.btn-cv {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 15px;
+  background-color: #1f4e79;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+.case-cv {
+  width: 250px;
+  padding: 20px;
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+.btn-cv:hover {
+  background-color: #163a5a;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* ============================================================
    2. LAYOUT GLOBAL (SIDEBAR + MAIN CONTENT)
    ============================================================ */
 

@@ -377,6 +377,29 @@ main {
     width: 1000px;
     height: 400px;
 }
+
+.photo-veille {
+    width: 1000px;
+    height: 400px;
+}
+
+.veille-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.photo-veille {
+    width: 600px;
+    border-radius: 20px;
+}
+
+.veille-container .data-card {
+    max-width: 320px;
+}
 /* ============================================================
    8. FLIP CARDS (SISR / SLAM)
    ============================================================ */

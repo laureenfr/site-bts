@@ -400,6 +400,33 @@ main {
 .veille-container .data-card {
     max-width: 320px;
 }
+.veille-images {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+
+    margin-top: 30px;
+}
+
+.mini-img {
+    width: 220px;
+    border-radius: 15px;
+
+    transition: 0.3s;
+}
+
+.mini-img-a {
+    width: 260px;
+    height: 140px;
+
+    object-fit: contain;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.mini-img:hover {
+    transform: scale(1.05);
+}
 /* ============================================================
    8. FLIP CARDS (SISR / SLAM)
    ============================================================ */

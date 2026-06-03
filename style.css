@@ -409,14 +409,14 @@ main {
 }
 
 .mini-img {
-    width: 220px;
+    width: 120px;
     border-radius: 15px;
 
     transition: 0.3s;
 }
 
 .mini-img-a {
-    width: 260px;
+    width: 160px;
     height: 140px;
 
     object-fit: contain;
